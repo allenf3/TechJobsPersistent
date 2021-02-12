@@ -5,6 +5,13 @@ namespace TechJobsPersistent.Models
 {
     public class Job
     {
+        public Job() { }
+
+        public Job(string name)
+        {
+            Name = name;
+        }
+
         public int Id { get; set; }
 
         public string Name { get; set; }
@@ -15,13 +22,5 @@ namespace TechJobsPersistent.Models
 
         public List<JobSkill> JobSkills { get; set; }
 
-        public Job()
-        {
-        }
-
-        public Job(string name)
-        {
-            Name = name;
-        }
     }
 }
