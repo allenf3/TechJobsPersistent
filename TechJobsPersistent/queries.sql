@@ -7,4 +7,10 @@
 	SELECT * FROM employers
     WHERE employers.Location = "St. Louis City";
 --Part 3
+	SELECT DISTINCT skills.Name, skills.Description FROM skills
+	INNER JOIN jobSkills
+	ON skills.id = jobSkills.SkillId
+	INNER JOIN jobs
+	ON jobSkills.JobId = jobs.Id
+	ORDER BY skills.Name;
 
